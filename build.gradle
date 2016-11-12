@@ -6,8 +6,11 @@ buildscript {
     }
     dependencies {
 <<<<<<< HEAD:build.gradle
+<<<<<<< HEAD:build.gradle
         classpath 'com.android.tools.build:gradle:2.2.2'
 =======
+=======
+>>>>>>> parent of 7572910... Login and Jon's edits:IOUApp/build.gradle
         classpath 'com.android.tools.build:gradle:2.0.0'
         classpath 'com.google.gms:google-services:3.0.0'
 >>>>>>> parent of 7572910... Login and Jon's edits:IOUApp/build.gradle
