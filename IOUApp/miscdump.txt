@@ -1,0 +1,88 @@
+public class Posts {
+  string user;
+  int rate;
+  string content;
+  string[] skills_wanted;
+
+  public Posts() {
+  }
+  public string getUser() {
+    return user;
+  }
+  public int getRate() {
+    return rate;
+  }
+  public string getContent() {
+    return content;
+  }
+  public string[] getSkills_wanted() {
+    return skills_wanted;
+  }
+}
+//----------------------------------------------------------------------------------------------------
+public class User {
+  string UID;
+  int IOUcount;
+  string location;
+  string contact;
+  int phone;
+  string[] skills;
+
+  public User() {
+  }
+
+  public int getIOUcount(string accessID) {
+    if(accessID.equalTo(UID))
+      return IOUcount;
+    else
+      return -1;
+  }
+  public string getLocation() {
+    return location;
+  }
+  public string getContact() {
+    return contact;
+  }
+  public int getPhone() {
+    return phone;
+  }
+  public string[] getSkills() {
+    return skills;
+  }
+}
+//----------------------------------------------------------------------------------------------------
+Firebase ref = new Firebase("https://ioucalhacks2016.firebaseio.com/");
+Query queryRef = ref.child("users").orderByChild("UID").equalTo(userUID);
+queryRef.addChildEventListener(new ChildEventListener() {
+    @Override
+    public void onChildAdded(DataSnapshot snapshot, String previousChild) {
+        User user = snapshot.getValue(User.class);
+        snapshot.getKey();
+        IOUcount = User.getIOUcount();
+        if(IOUcount != -1);
+        User.getLocation();
+        User.getPhone();
+        skills = User.getSkills();
+        for(int i = 0; i < skills.size(); i++){
+          skills[i];
+        }
+    }
+});
+//----------------------------------------------------------------------------------------------------
+Firebase ref = new Firebase("https://ioucalhacks2016.firebaseio.com/");
+Query queryRef = ref.child("users").orderByChild("UID").equalTo(userUID);
+queryRef.addChildEventListener(new ChildEventListener() {
+    @Override
+    public void onChildAdded(DataSnapshot snapshot, String previousChild) {
+        User user = snapshot.getValue(User.class);
+        snapshot.getKey();
+        IOUcount = User.getIOUcount();
+        if(IOUcount != -1);
+        User.getLocation();
+        User.getPhone();
+        skills = User.getSkills();
+        for(int i = 0; i < skills.size(); i++){
+          skills[i];
+        }
+    }
+});
